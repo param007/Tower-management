@@ -1,0 +1,85 @@
+  <app-nav-bar ></app-nav-bar>
+
+ 
+ 
+ <div *ngIf="nav.Csa">
+        <div class="navHome" >
+            <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+                <div class="container">
+                  <button  class="navbar-brand btn-outline-white" id="butn" (click)="showCsa()">My Profile</button>
+                  <div class="" id="ftco-nav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                    <!-- <li class="nav-item"><button   id="butn1" (click)="raiseFn()" class="nav-link">Raise a Ticket</button></li>
+                     -->
+                    <li class="nav-item"><a routerLink="/status" class="nav-link">Show Status</a></li>
+                    
+                    <li class="nav-item"><a class="nav-link" (click)="signOff()">Sign Out</a></li>
+               
+                  </ul>
+                  </div>
+                </div>
+              </nav>
+        </div>
+      
+
+
+<div class="modal fade" id="myModal" role="dialog">
+  
+  <div class="modal-dialog" style="box-shadow: 0px 3px 2px -1px rgba(0,0,0,0.75);">
+  
+    
+    <div class="modal-content" style="background-color: #FF5A09;">
+      
+      <div class="modal-body ">
+        <h4 style="color:#2D2F31; text-align: center;padding-top:5%">Profile</h4>
+          <div class="intro-display-widget">
+              <div class="card-display">
+                <div class="face"> </div>
+                 <div class="details">
+                    <!--<h4 class="name"> {{towers[1].csa.name}}</h4>-->
+                    <ul>
+                       <li> <i class="fi-torso"> </i>Customer Service Agent </li>
+                       <!-- <li> <i class="fi-marker"> </i> {{towers[1].circle}} Circle</li>-->
+                       <li> <i class="fi-social-github"> </i>  Towers Under Control </li> 
+                    </ul>
+                 </div>
+              </div>
+              
+      </div></div>
+      <div class="modal-footer " style="background-color: #2D2F31">
+          <button type="button" class="btn btn-warnin" data-dismiss="modal">Close</button>
+        </div>
+      
+    </div>
+    
+  </div>
+</div>
+
+<div id="overlayforCsa" (click)="off()" >
+    <div class="intro-display-widget" >
+        <div class="card-display">
+          <div class="face"> </div>
+           <div class="details" >
+              <!--<h4 class="name"> {{towers[1].csa.name}}</h4>-->
+              <ul>
+                <li><strong>{{csa.name}}</strong></li>
+                 <li> <i class="fi-torso"> </i>Customer Service Agent </li>
+                 <!-- <li> <i class="fi-marker"> </i> {{towers[1].circle}} Circle</li>-->
+                 <li> <i class="fi-social-github"> </i> {{csa.circle}} Circle </li> 
+              </ul>
+           </div>
+        </div>
+        <div>
+            <button type="button"   style="background-color: #2D2F31" class="btn btn-warnin" >Close</button>
+        </div>
+        
+</div>
+ 
+</div>
+
+</div>
+
+ 
+<router-outlet></router-outlet>
+

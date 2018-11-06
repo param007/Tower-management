@@ -1,0 +1,62 @@
+
+
+<div class="container mt-10">
+        <h3><i class="fa fa-ticket" style="margin-left:35%"></i>Tickets Generated</h3>
+        <div style="margin-left:35%">
+        <button class="btn btn-primary mr-2 " (click)="param='NEW'" (click)='page=1' >NEW</button>
+        <button class="btn btn-primary mr-2 " (click)="param='ACCEPTED' " (click)='page=1'> ACCEPTED</button>
+        <button class="btn btn-primary mr-2 " (click)="param='REJECTED'" (click)='page=1'>REJECTED</button>
+       </div>
+        <span *ngIf="showDownload">
+
+                <button class="btn btn-primary stylingg">
+               
+            <!-- <p>{{complaintsList[0].tower.towerId}}</p>         -->
+            <a class="download-link" target="_self" href="http://localhost:8080/towermgmt/Complaints/tower/{{complaintsList[0].tower.towerId}}/download" download="admin.pdf">Download</a>
+            
+            </button>
+                    
+                </span> 
+        <div class="row " >
+
+            <div class="col-sm-6 col-lg-4 card-deck" *ngFor="let c of complaintsList|filterStatus:param| paginate: { itemsPerPage: 9, currentPage: page } ">
+                <div class="card stitched m-4" > 
+            <div class="card-body">
+              <h5 class="card-title">Ticket Type : {{c.type|titlecase}}</h5>
+              <p class="card-text">
+              Tower Id : {{c.tower.towerId}}<br/>
+              Customer Service Agent : {{c.csa.name|titlecase}}<br/>
+              Telecom Circle : {{c.csa.circle}}
+              </p>
+                  
+            
+                                <modal #componentInsideModal >
+                            
+                            <ng-template #modalHeader><h4>
+                                <i class="fa fa-ticket"></i>  Ticket Information
+                            </h4></ng-template>
+                            <ng-template #modalBody style="background: azure;">
+                                <app-complaint-view [dummy_id]="c.complaintId"></app-complaint-view>
+                            </ng-template>
+                            <ng-template #modalFooter></ng-template>
+                        
+                            </modal> 
+            </div>
+            <p class="card-header"  [ngStyle]="{'background-color': c.actionStatus=='NEW'? 'lightblue' : c.actionStatus=='REJECTED'?'crimson':'lightgreen'}">
+                    <button (click)="componentInsideModal.open({center:true})" class="btn btn-primary card-link">View Ticket</button> 
+                  
+              
+                  </p>
+              </div>
+           </div> 
+</div>
+<pagination-controls (pageChange)="page=$event"></pagination-controls>
+     <!-- <ngb-pagination class="d-flex justify-content-end" [collectionSize]="complaintsList.length" [(page)]="page" aria-label="Default pagination"></ngb-pagination> -->
+    </div>
+    
+    <!-- [ngStyle]="{'background-color': c.actionStatus=='NEW'? 'lightblue' : c.actionStatus=='REJECTED'?'crimson':'lightgreen'}" -->
+       
+    
+
+
+ 

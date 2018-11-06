@@ -1,0 +1,29 @@
+<div class="outer"  >
+    <div class="container">
+        
+        <h2 style="text-align: center"><a href="/status" style="text-decoration: none;color:white;"></a></h2>
+        
+        <div id="t" style="text-align: center" *ngFor="let c of complaint" class="shadow-lg bg one p-3 mb-5 rounded ">
+            <div >
+                <div class="title h5">
+                  <p><strong> You  </strong> 
+                    have raised a complaint.</p>
+              <div style="line-height: 10px;clear: both"></div>
+
+                </div>	
+                						
+              </div>
+              <br/>
+              <div class="post-description " > 
+                    <h5>Complaint Id: {{c.complaintId}}</h5>
+                  <h5>Type: {{c.type}}</h5>
+                  <h5>Description : {{c.description}}</h5>
+                  <h5>Date of Issue : {{c.dateOfIssue}}</h5>
+                  <h5>Date of Approval : {{c.dateOfApproval}}</h5>
+                  <!-- <h5>Status : {{c.status}}</h5> -->
+              </div>			
+        </div>
+       
+        </div>
+  </div>
+ 

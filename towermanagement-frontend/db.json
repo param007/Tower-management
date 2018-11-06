@@ -1,0 +1,225 @@
+{
+  "towers": [
+    {
+      "towerId": 1,
+      "circle": "guindy",
+      "address": "sdafsd",
+      "engineerAssc": "param",
+      "lease": "farm",
+      "latitude": 76.6,
+      "longitude": 98.6,
+      "software": "softwaare",
+      "hardware": "Bfsadfsd",
+      "status": true,
+      "csa": {
+        "csaId": 1,
+        "circle": "guindy",
+        "name": "param",
+        "username": "param",
+        "pwd": "param",
+        "email": "param@gmail.com"
+      },
+      "company": []
+    },
+    {
+      "towerId": 2,
+      "circle": "EKKK",
+      "address": "sdafsd",
+      "engineerAssc": "param",
+      "lease": "farm",
+      "latitude": 76.6,
+      "longitude": 98.6,
+      "software": "softwaare",
+      "hardware": "Bfsadfsd",
+      "status": true,
+      "csa": {
+        "csaId": 1,
+        "circle": "guindy",
+        "name": "param",
+        "username": "param",
+        "pwd": "param",
+        "email": "param@gmail.com"
+      },
+      "company": []
+    },
+    {
+      "towerId": 3,
+      "circle": "vadapalani",
+      "address": "sdafsd",
+      "engineerAssc": "priya",
+      "lease": "farm",
+      "latitude": 76.6,
+      "longitude": 98.6,
+      "software": "softwaare",
+      "hardware": "Bfsadfsd",
+      "status": true,
+      "csa": {
+        "csaId": 2,
+        "circle": "vadapalani",
+        "name": "param",
+        "username": "param",
+        "pwd": "param",
+        "email": "param@gmail.com"
+      },
+      "company": []
+    },
+    {
+      "towerId": 4,
+      "circle": "vadapalani",
+      "address": "sdafsd",
+      "engineerAssc": "cxcxv",
+      "lease": "farm",
+      "latitude": 76.6,
+      "longitude": 98.6,
+      "software": "softwaare",
+      "hardware": "Bfsadfsd",
+      "status": true,
+      "csa": {
+        "csaId": 3,
+        "circle": "vadapalani",
+        "name": "param",
+        "username": "param",
+        "pwd": "param",
+        "email": "param@gmail.com"
+      },
+      "company": []
+    },
+    {
+      "towerId": 5,
+      "circle": "mambalam",
+      "address": "sdafsd",
+      "engineerAssc": "cxcxv",
+      "lease": "farm",
+      "latitude": 76.6,
+      "longitude": 98.6,
+      "software": "softwaare",
+      "hardware": "Bfsadfsd",
+      "status": true,
+      "csa": {
+        "csaId": 3,
+        "circle": "mambalam",
+        "name": "param",
+        "username": "param",
+        "pwd": "param",
+        "email": "param@gmail.com"
+      },
+      "company": []
+    }
+  ],
+  "csa": [
+    {
+      "csaId": 1,
+      "circle": "Chennai",
+      "name": "Priya",
+      "username": "priya455",
+      "email": "priya45@gmail.com"
+    },
+    {
+      "csaId": 2,
+      "circle": "Andhra Pradesh",
+      "name": "Manika",
+      "username": "manika5",
+      "email": "manika@gmail.com"
+    },
+    {
+      "csaId": 1,
+      "circle": "Karnataka",
+      "name": "Sharath",
+      "username": "Sharath23",
+      "email": "sharath@gmail.com"
+    },
+    {
+      "csaId": 1,
+      "circle": "Kerala",
+      "name": "Rahul",
+      "username": "rahul4",
+      "email": "rahul25@gmail.com"
+    }
+  ],
+  "complaints": [
+    {
+      "complaintId": 1,
+      "csa": {
+        "csaId": 1,
+        "circle": "guindy",
+        "name": "param",
+        "username": "param",
+        "pwd": "param",
+        "email": "param@gmail.com"
+      },
+      "tower": {
+        "towerId": 1,
+        "circle": "guindy",
+        "address": "sdafsd",
+        "engineerAssc": "param",
+        "lease": "farm",
+        "latitude": 76.6,
+        "longitude": 98.6,
+        "software": "softwaare",
+        "hardware": "Bfsadfsd",
+        "status": true,
+        "csa": {
+          "csaId": 1,
+          "circle": "guindy",
+          "name": "param",
+          "username": "param",
+          "pwd": "param",
+          "email": "param@gmail.com"
+        },
+        "company": []
+      },
+      "type": "BATTERY",
+      "description": "asdfsfsaf",
+      "dateOfIssue": "2018-11-11",
+      "dateOfApproval": "2018-12-12",
+      "status": false
+    },
+    {
+      "complaintId": 2,
+      "csa": {
+        "csaId": 2,
+        "circle": "V",
+        "name": "param",
+        "username": "param",
+        "pwd": "param",
+        "email": "param@gmail.com"
+      },
+      "tower": {
+        "towerId": 2,
+        "circle": "guindy",
+        "address": "sdafsd",
+        "engineerAssc": "param",
+        "lease": "farm",
+        "latitude": 76.6,
+        "longitude": 98.6,
+        "software": "softwaare",
+        "hardware": "Bfsadfsd",
+        "status": true,
+        "csa": {
+          "csaId": 2,
+          "circle": "vadapalani",
+          "name": "param",
+          "username": "param",
+          "pwd": "param",
+          "email": "param@gmail.com"
+        },
+        "company": []
+      },
+      "type": "BATTERY",
+      "description": "asdfsfsaf",
+      "dateOfIssue": "2018-11-11",
+      "dateOfApproval": "2018-12-12",
+      "status": true
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,36 @@
+
+
+     
+<div class="container-fluid">
+	<div class="row cb-slideshow-text-container ">
+		<div class="tm-content col-xl-6 col-sm-8 col-xs-8 ml-auto mr-auto section">
+     
+					<div class="login justify-content-center align-items-center">
+						<h1>Forgot Password </h1>
+						  <form method="post" #f="ngForm" (ngSubmit)="f.valid && resetPassword()">
+                <div>
+                <input type="email" name="email" placeholder="Enter your registered email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="email" [(ngModel)]="email"
+                required  #cemail=ngModel> 
+
+                <div class="alert alert-danger" *ngIf="cemail.errors && (cemail.dirty)">
+                  <p> <strong>
+                      <span *ngIf="cemail.errors.pattern">Invalid Email Id</span>
+                    </strong>
+                  </p>
+                </div>
+              </div>
+
+                <button type="submit" class="btn btn-primary btn-block">SUBMIT</button>
+               
+                
+				<p > <a  routerLink="/" tabindex="5" class="forgot-password">← Back </a></p>
+                </form>
+				</div>
+					
+
+
+		</div>
+	</div>
+
+</div>
+

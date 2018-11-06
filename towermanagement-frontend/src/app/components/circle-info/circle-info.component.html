@@ -1,0 +1,69 @@
+<!-- <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head> -->
+  <div class="container">
+      <button class="btn mr-2 btn-primary" (click)="showCsa()">   View CSA Details </button>
+  
+      
+     
+          <button class="btn mr-2 btn-primary" type="button" (click)="showMapp()">
+             Map
+          </button>
+   <!--  
+  <modal #showMap>
+    <ng-template #modalHeader><h2>Tower Locations</h2></ng-template>
+    <ng-template #modalBody>
+      <app-show-map [circleName]="circle"></app-show-map>
+    </ng-template>
+    <ng-template #modalFooter></ng-template>
+  </modal>
+  -->
+  </div>
+  
+  
+  
+  <div class="row center m-auto ">
+    <div class="col-md-4 col-sm-6" *ngFor="let t of towers">  <!--Removed this col-lg-2-->
+      <div class="card bg-dark text-white" >
+        <!--<img class="card-img-top" [src]="" />-->
+        <div class="card-body">
+          <h6 class="card-title">Tower {{t.towerId}} </h6>
+          <p class="card-text">
+            Circle : {{t.circle}}
+            Status : {{t.status?'Active':'GG'}}
+          </p>
+        </div>
+        <div class="card-footer" #cf>
+          <div class="btn-group">
+            <a routerLink="/viewTower/{{t.towerId}}" class="btn btn-primary">
+              View Details
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  <div>
+  </div>
+  
+  <div id="overlayforCsa" (click)="off()" *ngIf="csaIdd">
+    <div id="text">
+      
+      Name: {{csa.name}}<br/>
+      CSA Id: {{csa.csaId}} <br/>
+      Circle: {{csa.circle}}
+    </div>
+  </div>
+  
+  <div id="overlayforMap" (click)="offMap()">
+      <div class="ifram">
+          <iframe  [src]="mapurl|safeUrl"
+            style="height: 80vh;width:80vw;" ></iframe>
+             </div>
+  </div>
+  
+  

@@ -1,0 +1,55 @@
+.container{
+    /* background-color: rgb(205, 245, 248,0.5); */
+    /* background: linear-gradient(to right, #92c6eb17 10%, #12d8fa2b 51%, #0f588b36 100%);
+    */
+}
+.card{
+    
+    background: linear-gradient(to right, #1d42e617 0%, #2b36cf2b 51%, #1a26c936 100%);
+   
+    border-radius: 15%;
+    margin: 5%;
+    border-color: rgb(50, 50, 100);
+    border-width: 3px;
+    
+    
+}
+
+
+.card-footer{
+    /* border-radius: 25%; */
+    border-color: rgb(38, 38, 80);;
+}
+
+
+.card:hover{
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    background:  #b1ace4ef ;
+}
+.card-body{
+    border-radius: 15%;
+    
+    text-align: center;
+}
+.outer{
+    
+    width: 100%;
+    height: 100%;
+}
+.btn-group{
+    border-bottom-right-radius: 15%;
+}
+.fas{
+    
+    text-decoration-color: rgb(50, 50, 100);
+    
+}
+.btn{
+    color: rgb(50, 50, 100);
+    
+}
+.labeldetails{
+    color: rgb(50, 50, 100);
+}

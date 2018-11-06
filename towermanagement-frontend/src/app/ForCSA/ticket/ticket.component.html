@@ -1,0 +1,70 @@
+
+
+  <body>
+    <div class="container-fluid w-screen " >
+            <div class="row ">
+              <div class="outt col-sm-9 col-lg-5 ml-auto mr-auto mb-auto mt-auto">
+                <form class="form" #f="ngForm" novalidate (ngSubmit)="f.valid">
+                  <div class="mb-3">
+                        <label>Customer Service Agent Id</label>
+                    <div class="input-group">
+                      
+                      <input type="number" class="form-control" id="csaId" name="csaId" required  placeholder="{{complaint.csa.csaId}}"
+                      readonly [(ngModel)]="complaint.csa.csaId"/>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                        <label>Tower Id</label><br/>
+                    <div *ngIf="!tow" class="input-group ">
+                      <input type="number" class="form-control"  id="towerId" name="towerId" placeholder="Tower Id" required 
+                      [(ngModel)]="complaint.tower.towerId"/>
+                    </div>
+                    <div  *ngIf="tow"  class="input-group ">
+                       <input type="number" autocomplete="off" class="form-control" id="subId" placeholder="{{complaint.tower.towerId}}" readonly
+                        name="subsId"  [(ngModel)]="complaint.tower.towerId" >
+                         </div>
+                 
+                    
+                  </div>
+                  
+                  <div class="mb-3">
+                      <label>Type of Request</label><br/>
+                  <div class="input-group">
+                          
+                    <select autocomplete="off" class="form-control " id="type" name="type" required  [(ngModel)]="complaint.type" #cDesc=ngModel required>
+                            <option value="BATTERY">Battery</option>
+                            <option value="BANDWIDTH">Bandwidth</option>
+                            <option value="CAPACITOR">Capacitor</option>
+                            <option value="STRUCTURAL">Structural</option>
+                            <option value="WIRING">Wiring</option>
+                            <option value="OTHERS">Others</option>
+                            
+                          </select>
+                         
+                  </div>
+                  <div  class="alert alert-warning" *ngIf="cDesc.errors && (cDesc.touched || cDesc.dirty)" style="margin:2%">
+                      <p style="color:black;margin:5px">Desc <strong>
+                          <span *ngIf="cDesc.errors.required">should not be  left blank</span>
+                        </strong>
+                      </p>
+                    </div>
+                 
+                </div>
+                  <div class="mb-3">
+                        <label>Description</label><br/>
+
+                        <div class="input-group">
+
+                                <textarea name="comm" autocomplete="off" id="desc"   rows="7" class="form-control" placeholder="Description" 
+                                [(ngModel)]="complaint.description"></textarea>
+                        </div>
+                       
+                      </div>
+                  <div>
+                    <button class="btn btn-block btn-primary" (click)="doComplaint()">Raise Complaint</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </body>

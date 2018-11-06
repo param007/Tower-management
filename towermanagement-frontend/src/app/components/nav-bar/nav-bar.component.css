@@ -1,0 +1,40 @@
+.badge-notify{
+    background:red;
+    color:white;
+    position:relative;
+    top: -20px;
+    left: -12px;
+   }
+   .dropdown-toggle::after {
+    display:none;
+}
+
+.navbar 
+{
+    background: #292961;
+    color:white;
+}
+.nav-link
+{
+    color:#dadaf1;
+}
+
+.nav-link:hover
+{
+    color:white;
+}
+.fa-bell
+{
+    /* color:rgb(216, 204, 243); */
+    color: #dadaf1;
+}
+
+.fa-bell:hover
+{
+    color:white;
+    transform: scale(1.05);
+}
+.fa-navicon
+{
+    color:white;
+}

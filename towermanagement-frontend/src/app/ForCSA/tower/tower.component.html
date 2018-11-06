@@ -1,0 +1,91 @@
+<div class="outer">
+  <div class="container one">
+  <div class="row">
+      <div class="col-sm-9 col-lg-6 mr-auto  ml-auto  mt-auto mb-auto shadow-lg p-3 mb-5 bg-white rounded">
+
+        <h4>Tower {{tower.towerId}} Details</h4>
+  <ul>
+    <li><strong>Circle :</strong>  {{tower.circle}}</li>
+    <li><strong>Address :</strong>   {{tower.address}}</li>
+    <li><strong>CsaId :</strong>   {{tower.csa.csaId}}</li>
+    <li><strong>Engineer :</strong>  {{tower.engineerAssc}}</li>
+    <li><strong>Lease :</strong>   {{tower.lease}}</li>
+    <li><strong>Latitude :</strong>  {{tower.latitude}}</li>
+    <li><strong>Longitude :</strong>   {{tower.longitude}}</li>
+    <li><strong>Software :</strong>  {{tower.software}}</li>
+    <li><strong>Hardware :</strong>  {{tower.hardware}}</li>
+   <!--<li><strong>Companies Sharing  </strong>  
+      <span *ngFor="let t of tower.companies"><strong>: </strong> {{t.cmpnyId}} {{t.cmpnyName}} </span></li>-->
+      <li><a routerLink="/towCom/{{tower.towerId}}" style="cursor: pointer;border:black;border-radius: 8%" ><strong><u>Complaint History</u></strong></a></li>
+   
+    
+</ul>
+</div></div>
+</div></div>
+
+
+<!--
+<div class="jumbotron vertical-center">
+  <div class="container mt-2 " style="margin:auto">
+          <div class="row no-gutters justify-content-center pb-5">
+            <div class="col-sm-9 col-lg-6 m-auto outer">
+              <form class="form" #f="ngForm" novalidate (ngSubmit)="f.valid && save()">
+                <div class="mb-3">
+                  <div class="input-group">
+                    
+                    <input type="text" class="form-control" id="csaId" name="csaId" required  placeholder=""
+                    readonly />
+                  </div>
+                </div>
+                <div class="mb-3">
+                      <label>Tower Id</label><br/>
+                  <div *ngIf="!tow" class="input-group ">
+                    <input type="number" class="form-control"  id="towerId" name="towerId" placeholder="Tower Id" required 
+                    [(ngModel)]="complaint.tower.towerId"/>
+                  </div>
+                  <div  *ngIf="tow"  class="input-group ">
+                     <input type="number" autocomplete="off" class="form-control" id="subId" placeholder="{{complaint.tower.towerId}}" readonly
+                      name="subsId"  [(ngModel)]="complaint.tower.towerId" >
+                       </div>
+               
+                  
+                </div>
+                
+                
+                <div class="mb-3">
+                      <label>Type of Request</label><br/>
+                  <div class="input-group">
+                          
+                    <select autocomplete="off" class="form-control " id="type" name="type" required  [(ngModel)]="complaint.type">
+                            <option value="Battery">Battery</option>
+                            <option value="Bandwidth">Bandwidth</option>
+                            <option value="Capacitor">Capacitor</option>
+                            <option value="Structural">Structural</option>
+                            <option value="Wiring">Wiring</option>
+                            <option value="Others">Others</option>
+                            
+                          </select>
+                  </div>
+                 
+                </div>
+                <div class="mb-3">
+                      <label>Description</label><br/>
+
+                      <div class="input-group">
+
+                              <textarea name="comm" autocomplete="off" id="desc"   rows="7" class="form-control" placeholder="Description" 
+                              [(ngModel)]="complaint.description"></textarea>
+                      </div>
+                     
+                    </div>
+                <div>
+                  <button class="btn btn-block btn-primary" (click)="doComplaint()">Raise Complaint</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div></div>
+
+
+</div>
+-->

@@ -1,0 +1,108 @@
+<!-- <nav class="navbar navbar-expand-lg " *ngIf="nav.userAdmin">
+    
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse show" [ngClass]="{ 'show': navbarOpen }">
+            <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" routerLink="/circle" data-toggle="tab">Home</a></li>
+                 
+                <li ngbDropdown class="nav-item dropdown active" (click)="hideNotify()">
+                    
+                    <span ngbDropdownToggle
+                     class="nav-link dropdown-toggle"
+                      href="#" id="navbarDropdown" 
+                       data-toggle="dropdown"
+                       aria-haspopup="true" 
+                       aria-expanded="false">
+                       <i class="fa fa-bell fa-2x badge-wrapper" ></i>
+                       <span *ngIf="count>0" class="badge badge-notify" id="notify-span">{{count}}</span>
+                </span>
+                    <div  ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown" >
+                        <div (load)="updateData()" *ngFor="let c of complaintsList|slice:0:3">
+                          <div >
+                          <a routerLink="/complaintview/{{c.complaintId}}" class="dropdown-item"
+                          >Complaint Id : {{c.complaintId}}<br/>
+                         Complaint Type : {{c.type}}<br/>
+                          Date of Issue : {{c.dateOfIssue}}<br/>
+                          Status : {{c.viewStatus}}
+                          </a>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                      </div>
+                      <a class="dropdown-item" routerLink="/complainthistory" style="text-align: center">Read More</a>
+                    </div>
+                  
+                </li>
+     
+                <li class="nav-item"><a class="nav-link" routerLink="/csadetails" data-toggle="tab">CSA Information</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/complainthistory"  data-toggle="tab">Complaints</a></li>
+                <li class="nav-item"><a class="nav-link" (click)="signOff()">Sign Out</a></li>
+               
+                
+                <!-- <li class="nav-item"> <img class="icons" src="assets/telephone-symbol-button_318-41893.jpg" width="20" height="20">&nbsp;&nbsp;New Connection&nbsp;:&nbsp;9999888844</li>
+                <li class="nav-item"> <img class="icons" src="assets/user.png" width="20" height="20">&nbsp;&nbsp;Login </li>
+            </ul>
+        </div>
+    </div>
+</nav> -->
+<nav class="navbar navbar-expand-lg " *ngIf="nav.userAdmin">
+    
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link mx-auto" style="font-size : 1.4em" routerLink="/circle" data-toggle="tab">Home</a></li>
+              
+            </ul>
+            </div>
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="toggleNavbar()">
+                    <span class="navbar-toggler-icon"><i class="fa fa-navicon"></i></span>
+          </button>
+            <div class="collapse navbar-collapse show" [ngClass]="{ 'show': navbarOpen }">
+                <ul class="navbar-nav ml-auto">
+                        <!-- <li class="nav-item"><a class="nav-link" routerLink="/circle" data-toggle="tab">Home</a></li> -->
+                     
+                    <li ngbDropdown class="nav-item dropdown active" (click)="hideNotify()">
+                        
+                        <span ngbDropdownToggle
+                         class="nav-link dropdown-toggle"
+                          href="#" id="navbarDropdown" 
+                           data-toggle="dropdown"
+                           aria-haspopup="true" 
+                           aria-expanded="false">
+                           <i class="fa fa-bell fa-2x badge-wrapper" ></i>
+                           <span *ngIf="count>0" class="badge badge-notify" id="notify-span">{{count}}</span>
+                    </span>
+                        <div  ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown" >
+                            <div (load)="updateData()" *ngFor="let c of complaintsList|slice:0:3">
+                              <div>
+                                    <a routerLink="/complaintview/{{c.complaintId}}" class="dropdown-item"
+                                    [ngStyle]="{'background-color': c.actionStatus=='NEW'? 'lightblue':'white'}"
+                                    >
+                                    Ticket has been raised by {{c.csa.name}}<br/>
+                                   Type of ticket is {{c.type}}<br/>
+                                    Issued on {{c.dateOfIssue}}<br/>
+                                    </a>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                          </div>
+                          <a class="dropdown-item" routerLink="/complainthistory" style="text-align: center">Read More</a>
+                        </div>
+                      
+                    </li>
+         
+                    <li class="nav-item"><a class="nav-link" routerLink="/csadetails" data-toggle="tab">CSA Information</a></li>
+                    <li class="nav-item"><a class="nav-link" routerLink="/complainthistory"  data-toggle="tab">Complaints</a></li>
+                    <li class="nav-item"><a class="nav-link" (click)="signOff()">Sign Out</a></li>
+                   
+                    
+                    <!-- <li class="nav-item"> <img class="icons" src="assets/telephone-symbol-button_318-41893.jpg" width="20" height="20">&nbsp;&nbsp;New Connection&nbsp;:&nbsp;9999888844</li>
+                    <li class="nav-item"> <img class="icons" src="assets/user.png" width="20" height="20">&nbsp;&nbsp;Login </li>-->
+                </ul>
+                
+    
+            </div>
+        </div>
+    </nav>
+    

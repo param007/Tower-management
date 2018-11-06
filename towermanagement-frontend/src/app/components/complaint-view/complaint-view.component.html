@@ -1,0 +1,32 @@
+
+<div class="container mt-10">
+    
+        <div class="card" >
+          <div class="card-body">
+            <h6 class="card-title">Complaint Id:{{complaint.complaintId}}</h6>
+            <div class="card-text">
+             <p>Complaint Type : {{complaint.type}}</p>
+             <p>Description : {{complaint.description}}</p> 
+             <p>Ticket raised by : {{complaint.csa.name}}</p>
+             <p>Complaint Action Status : {{complaint.actionStatus}}</p>
+             <p>CSA Id: {{complaint.csa.csaId}}</p>
+             <p>Circle : {{complaint.csa.circle}}</p>
+             <p>Tower Id : {{complaint.tower.towerId}} </p>
+            </div>
+          </div>
+          <div class="card-footer" >
+            <div class="btn-group" *ngIf="complaint.actionStatus=='NEW';else statusTemplate">
+         <button (click)="changeActionStatus('ACCEPTED',complaint)" class="btn btn-primary" style="margin:5px;">
+          Approve
+         </button>
+              <button (click)="changeActionStatus('REJECTED',complaint)" class="btn btn-primary" style="margin:5px;">
+               Reject 
+              </button>
+            </div>
+            <ng-template #statusTemplate>
+              The complaint has been {{complaint.actionStatus|titlecase}}
+            </ng-template>
+          </div>
+        </div>
+     
+  </div>

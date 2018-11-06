@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+<div class="outer w-screen">
+<div class="container mt-10">
+    <h2 class="mb-5 ml-5">
+      <fa name="users"></fa>Customer Service Agent
+    </h2>
+  
+    <div class="alert alert-warning" *ngIf="!csaList || csaList.length==0">
+      <fa name="exclamation-triangle"></fa> Records could not be found or loaded
+    </div>
+  
+    <div class="row" *ngIf="csaList && csaList.length>0">
+      <div class="col-sm-6 col-lg-4 card-deck" *ngFor="let c of csaList">
+        <div class="card" >
+          <div class="card-body">
+            <h5 class="card-title">{{c.name}}</h5>
+            <div class="card-text">
+          <!--   <p>UserName : {{c.username}}</p>-->
+             <p><span class="labeldetails" style="width:50px">CSAId </span>   : {{c.csaId}}</p>
+             <p><span class="labeldetails">Email Id </span>: {{c.email}}</p>
+             <p><span class="labeldetails">Circle </span>  : {{c.circle}}</p>
+            </div>
+          </div>
+          <div class="card-footer" >
+            <div class="btn-group">
+         <a routerLink="/tower-info/{{c.csaId}}" class="btn ">Towers<i class="fas fa-broadcast-tower"></i>
+              </a>
+              <a routerLink="/complaints/csa/{{c.csaId}}" class="btn ">Tickets<i class="fas fa-ticket-alt "></i>
+                    </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

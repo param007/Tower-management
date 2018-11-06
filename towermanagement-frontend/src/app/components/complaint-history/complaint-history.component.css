@@ -1,0 +1,27 @@
+
+.stitched {
+    margin: 10px;
+    background:aliceblue;
+    color:black;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.3em;
+    border: 2px dashed rgb(95, 95, 99);
+    border-radius: 10px;
+    box-shadow: 0 0 0 4px #423e3f, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+    
+    font-weight: normal;
+ }
+  .card-header{
+     border-bottom-left-radius: 8px;
+     border-bottom-right-radius: 8px;
+ } 
+ 
+ .download-link
+ {
+     text-decoration: none;
+     color:white;
+ }
+ .stylingg{
+     margin-left: 90%;
+ }

@@ -1,0 +1,38 @@
+
+<div class="outer">
+    <h4 style="text-align: center;color:white">Complaint History</h4><br/>
+    <div *ngIf="!gotComplaints">
+        <h1>No Records Found.</h1>
+    </div>
+        <div class="container one">
+        <div class="row">
+            
+            <div *ngFor="let t of complaint" class="towInn col-sm-8 col-lg-5 shadow-lg p-3 mb-5 bg-white rounded">
+        <ul>
+          <li>Complaint Id : {{t.complaintId}}</li>
+          <li>Type : {{t.type}}</li>
+          <li>Date Of Issue : {{t.dateOfIssue}}</li>
+          <li>Date Of Approval : {{t.dateOfApproval}}</li>
+          <!-- <li>Status : {{t.status}}</li> -->
+         <li>Description :{{t.description}}</li>
+                
+          
+      
+          
+      </ul>
+            
+      <!-- <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            <p>{{t.description}}</p>
+          </div>
+        </div>-->
+      </div> 
+    
+      
+    </div>
+      </div>
+    </div>
+    
+    
+    
+    

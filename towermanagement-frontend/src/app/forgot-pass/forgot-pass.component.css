@@ -1,0 +1,70 @@
+
+
+.login { 
+	margin: auto;
+	/* position: absolute;
+	top: 50%; */
+	/* left: 50%; */
+	/* margin: -150px 0 0 -150px; */
+	padding-right: 20px;
+	padding-left: 20px; 
+	padding-bottom: 10px;
+	/* padding: 25px; */
+	width:70%;
+	height:20%;
+	/* background-color: rgb(190, 184, 184,0.9); */
+	background-color: rgb(255,255,255,0.8);
+	border-radius: 15px;
+}
+
+/* .login h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; } */
+
+.login h1 { color: rgb(85, 58, 58); text-shadow: 2px 0 0px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
+
+input { 
+	width: 100%; 
+	margin-bottom: 10px; 
+	background: rgba(24, 22, 22, 0.548);
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;
+		text-align: center;
+	
+}
+input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+
+
+/* .container-fluid{
+	background-color:rgba(155, 73, 35, 0.5);
+} */
+
+.container-fluid{
+	background-image: url("/src/assets/tower4.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.btn{
+	width: 40%;
+	margin-left: 30%;
+	overflow: hidden;
+}
+
+
+.forgot-password{
+	color: black;
+}
+input::placeholder {
+	color: #fff;
+  }

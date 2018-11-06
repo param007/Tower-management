@@ -1,0 +1,56 @@
+<!-- <html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head> -->
+
+
+<h1>Telecom Cirlces</h1>
+<div class="container ">
+    <div class="row ">
+
+            <div class="circle col-lg-4 col-md-auto col-sm-6  col-12 block">
+            <a routerLink="/circle-info/Madurai">
+                <img [src]="maduraiUrl" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text">Madurai</div>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="circle col-lg-4 col-md-auto col-sm-6  col-12 block">
+            <a routerLink="/circle-info/Agra">
+                <img [src]="agraUrl" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text">Agra</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="circle col-lg-4 col-md-auto col-sm-6  col-12 block">
+            <a routerLink="/circle-info/Mysore">
+                <img [src]="mysoreUrl" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text">Mysore</div>
+                </div>
+            </a>
+
+        </div>
+        <div class="circle col-lg-4 col-md-auto col-sm-6  col-12 block">
+                <a routerLink="/circle-info/Kochi">
+                    <img [src]="kochiUrl" class="image" style="width:100%">
+                    <div class="middle">
+                        <div class="text">Kochi</div>
+                    </div>
+                </a>
+    
+            </div>
+    </div>
+    <div>
+            <a routerLink="/circle" class="btn btn-primary">Previous Page</a>
+    </div>
